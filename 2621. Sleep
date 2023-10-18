@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <section id="txt">
+        <h1>
+            2621. Sleep
+        </h1>
+        <h2>Given a positive integer millis, write an asynchronous function that sleeps for millis milliseconds. It can
+            resolve any value.</h2>
+    </section>
+    <script>
+
+        const txt = document.getElementById("txt");
+
+        async function sleep(millis) {
+            await new Promise(resolve => setTimeout(resolve, millis));
+        }
+        // Using async/await
+        async function exampleAsync() {
+            console.log('Start');
+            document.write('Start');
+            await sleep(1000);
+            console.log('End');
+            document.write(txt.innerHTML);
+            document.write('End');
+        }
+        exampleAsync()
+    </script>
+</body>
+
+</html>
